@@ -9,38 +9,38 @@ class Model_Groen_et_al:
     """ Simulation of several temporal models to predict a neuronal response given a stimulus
     time series as input.
 
-    This class contains the following modeling components:
+    This class contains the following modeling components (defined as class functions):
     lin : convolves input with an Impulse Response Function (IRF)
     rectf : full-wave rectification
     exp : exponentiation
 
-    Options for divise normalization (i.e. computation for the value of the denominator):
+    Options for (divise) normalization (i.e. computation for the value of the denominator):
     norm : normalization of the input with a semi-saturation constant
     delay: delayed normalization of the input with a semi-saturation constant
 
     params
     -----------------------
-    stim : array dim(1, T)
-        stimulus time course
+    stim : array dim(T)
+        contains timepoints where t = (1,...,T)
     sample_rate : int
-        frequency with which the timepoints are measured
+        frequency of measurement
     tau_pos : float
-        forms impulse response function
+        controls positive impulse response function (IRF)
     tau_neg : float
-        forms impulse response function
+        fcontrols negative IRF
     n_irf : float
         phase delay for positive and negative IRF
     weight : float
         ratio of negative to positive IRFs
     shift : float
-        time between stimulus onset and when the signal reaches the cortex (seconds)
+        time between stimulus onset and when the signal reaches the cortex
     scale : float
         response gain
     n : float
         exponent
     sigma : float
         semi-saturation constant
-    tau_a : time window of adaptation (seconds)
+    tau_a : time window of adaptation
 
     """
 
@@ -121,7 +121,7 @@ class Model_Groen_et_al:
         return normrsp
 
     def norm_delay(self, input, linrsp):
-        """ Introduces delay in input """
+        """ Introduces delay in normalization of input """
 
         # compute the normalized delayed response
         poolrsp = np.convolve(linrsp, self.norm_irf, 'full')
