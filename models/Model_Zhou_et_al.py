@@ -117,4 +117,4 @@ class Model_Zhou_et_al:
         demrsp = self.sigma**self.n + abs(poolrsp)**self.n                      # semi-saturate + exponentiate
         normrsp = input/demrsp                                                  # divide
 
-        return rsp
+        return normrsp

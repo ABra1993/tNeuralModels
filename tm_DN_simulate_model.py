@@ -34,15 +34,15 @@ def main():
     # (That is, either section 'zhou' or 'groen' needs to be commmented out.)
 
     # ---------------------- Zhou et al.
-    # type = 'zhou'
-    #
-    # tau = 0.1;
-    # weight = 0.1;
-    # shift = 0.01;
-    # scale = 2;
-    # n = 1.5;
-    # sigma = 0.15;
-    # tau_a = 0.07;
+    type = 'zhou'
+
+    tau = 0.1;
+    weight = 0.1;
+    shift = 0.01;
+    scale = 2;
+    n = 1.5;
+    sigma = 0.15;
+    tau_a = 0.07;
 
     # ----------------------Groen et al.
     type = 'groen'
