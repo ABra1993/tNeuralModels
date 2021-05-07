@@ -31,7 +31,8 @@ def main():
 
     # 1. ----------------------
     # Choose model type that is going to be simulated.
-    # (That is, either section 'zhou' or 'groen' needs to be commmented out.)
+    # (That is, either section 'zhou' or 'groen' needs to be commmented out as
+    # well as the set parameters.)
 
     # ---------------------- Zhou et al.
     type = 'zhou'
