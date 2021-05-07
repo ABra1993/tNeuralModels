@@ -106,10 +106,7 @@ class Model_Zhou_et_al:
         demrsp = self.sigma**self.n + abs(linrsp)**self.n                       # semi-saturate + exponentiate
         normrsp = input/demrsp                                                  # divide
 
-        # scale with gain
-        rsp = self.scale * normrsp
-
-        return rsp
+        return normrsp
 
     def norm_delay(self, input, linrsp):
         """ Introduces delay in normalization of input """
@@ -119,8 +116,5 @@ class Model_Zhou_et_al:
         poolrsp = poolrsp[0:self.numtimepts]
         demrsp = self.sigma**self.n + abs(poolrsp)**self.n                      # semi-saturate + exponentiate
         normrsp = input/demrsp                                                  # divide
-
-        # scale with gain
-        rsp = self.scale * normrsp
 
         return rsp

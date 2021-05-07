@@ -34,28 +34,28 @@ def main():
     # (That is, either section 'zhou' or 'groen' needs to be commmented out.)
 
     # ---------------------- Zhou et al.
-    type = 'zhou'
-
-    tau = 0.1;
-    weight = 0.1;
-    shift = 0.01;
-    scale = 2;
-    n = 1.5;
-    sigma = 0.15;
-    tau_a = 0.07;
-
-    # ----------------------Groen et al.
-    # type = 'groen'
+    # type = 'zhou'
     #
-    # tau_pos = 0.1;
-    # tau_neg = 0.03;
-    # n_irf = 2;
+    # tau = 0.1;
     # weight = 0.1;
     # shift = 0.01;
     # scale = 2;
     # n = 1.5;
     # sigma = 0.15;
     # tau_a = 0.07;
+
+    # ----------------------Groen et al.
+    type = 'groen'
+
+    tau_pos = 0.03;
+    tau_neg = 0.003;
+    n_irf = 2;
+    weight = 0.25;
+    shift = 0.2;
+    scale = 2;
+    n = 1.5;
+    sigma = 0.2;
+    tau_a = 0.11;
 
 
     # 2. ----------------------
