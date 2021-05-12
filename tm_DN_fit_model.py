@@ -10,9 +10,8 @@ from utils.objective_function import *
 """
 Author: A. Brands
 
-Outputs:
+Description: fits the DN model to data using least squares algorithm.
 
-Description:
 
 """
 
@@ -20,14 +19,14 @@ def main():
 
     ################### BEFORE RUNNING THE SCRIPT ###################
 
-    # Please specify points 1-3 below.
+    # Please specify points 1-4 below.
 
     # 1. ----------------------
     # Choose model type that is going to be simulated.
     # (That is, either 'zhou' or 'groen' needs to be commmented out)
 
     model = 'zhou'
-    # model = 'groen'
+    model = 'groen'
 
     # 2. ----------------------
     # Define parameter space.
@@ -88,8 +87,8 @@ def main():
     # 3. ----------------------
     # Prepare data, please see points 3a and 3b.
 
-    # 3a. Define data location
-    dir = '/Users/a.m.brandsuva.nl/surfdrive/Documents/code/atom/temporal_models/data/onepulse.txt'
+    # 3a. Define directory where data is stored on the computer.
+    dir = ''
 
     # 3b preprocess data.
     # For fitting the model, the data needs to be presented as an np.array with
@@ -117,10 +116,7 @@ def main():
     # The stimulus timecourse should have the same shape as the data (i.e. same
     # number of samples, n_samples, and timepoints, timepts).
 
-    # stim = np.array()
-
-    stim = np.zeros((n_samples, timepts))
-    stim[:, 200:300] = 1
+    stim = np.array()
 
     # 4. ----------------------
     # Define sampling rate
