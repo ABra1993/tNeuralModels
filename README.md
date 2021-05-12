@@ -4,8 +4,8 @@ The current repository contains the implementation of the Delayed Normalization 
 ## Files and directories
 ### tm_DN_simulate_model.py
 This script simulates the model using on of two variations of the DN model:
-- Groen et al. : Described in the paper below (see References). This model contains 7 parameters.
-- Zhou et al. : Unpublished variation of the DN model. This model contains 9 parameters, where the impulse response function (IRF) for the linear computation has two additional parameters.
+- Zhou et al. : Described in the paper below (see References). This model contains 7 parameters.
+- Groen et al. : Unpublished variation of the DN model. This model contains 9 parameters, where the impulse response function (IRF) for the linear computation has two additional parameters.
 
 ### tm_DN_fit_model.py
 Fits the model using the least squares algorithm.
