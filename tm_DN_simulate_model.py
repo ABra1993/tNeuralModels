@@ -78,7 +78,7 @@ def main():
     ###########################################################################
 
     # initiate timecourse
-    t = np.arange(1000) * (1/sample_rate)
+    t = np.arange(timepts) * (1/sample_rate)
 
     # set parameters
     if type == 'zhou':

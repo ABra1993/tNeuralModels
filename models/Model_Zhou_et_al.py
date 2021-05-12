@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # required scripts
-from utils.functions import *
+from utils.response_function import *
 
 class Model_Zhou_et_al:
     """ Simulation of several temporal models to predict a neuronal response given a stimulus
