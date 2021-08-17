@@ -15,7 +15,7 @@ contains two classes (i.e. Model_Zhou_et_al and Model_Groen_et_al) where the two
 
 ### utils
 Contains the following scripts:
-- visualization: function to visualize the output of the model simulation and
+- visualization: function to visualize the output of the model simulation (toy example and with fitted parameters)
 - functions : contains two response functions used for the (non)linear computation of the neural output.
 - tm_objective : functions for fitting the model with data (least sqaures method)
 
