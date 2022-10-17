@@ -32,12 +32,12 @@ def plot_models(t, stim, type, models, params, params_label):
     """
 
     # initiate figure
-    fig = plt.figure(figsize=(7, 6))
+    fig = plt.figure(figsize=(12, 6))
     plt.title('Temporal model according to ' + type.capitalize() + ' et al. (' + str(len(params)) + ' parameters)')
 
     # define figure layout
     plt.xlabel('Time')
-    plt.ylabel('Neural prediction')
+    plt.ylabel('Model prediction (normalized)')
     lw=2
     ax = plt.gca()
     ax.spines['top'].set_visible(False)
@@ -54,11 +54,11 @@ def plot_models(t, stim, type, models, params, params_label):
     plt.plot(t, stim, color='grey', label='stimulus', lw=lw)
 
     # plot models
-    plt.plot(t, models[0], color=RGB[0, :], label='l', lw=lw)                             # linear
-    plt.plot(t, models[1], color=RGB[1, :], label='l+rect',lw=lw)                         # linear + rectf
-    plt.plot(t, models[2], color=RGB[2, :], label='l+rectf+exp',lw=lw)                    # linear + rectf + exp
-    plt.plot(t, models[3], color=RGB[3, :], label='l+rectf+exp+norm',lw=lw)               # linear + rectf + exp + norm
-    plt.plot(t, models[4], color=RGB[4, :], label='l+rectf+exp+norm with delay',lw=lw)    # linear + rectf + exp + delayed norm
+    plt.plot(t, models[0]/max(models[0]), color=RGB[0, :], label='l', lw=lw)                             # linear
+    plt.plot(t, models[1]/max(models[1]), color=RGB[1, :], label='l+rect',lw=lw)                         # linear + rectf
+    plt.plot(t, models[2]/max(models[2]), color=RGB[2, :], label='l+rectf+exp',lw=lw)                    # linear + rectf + exp
+    plt.plot(t, models[3]/max(models[3]), color=RGB[3, :], label='l+rectf+exp+norm',lw=lw)               # linear + rectf + exp + norm
+    plt.plot(t, models[4]/max(models[4]), color=RGB[4, :], label='l+rectf+exp+norm with delay',lw=lw)    # linear + rectf + exp + delayed norm
 
     # add params to legend
     for i in range(len(params)):
